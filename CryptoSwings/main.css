@@ -1,0 +1,129 @@
+	body {
+
+		min-height: 300px;
+		background-color: rgba(211,211,211,0.20);
+		min-width: 400px;
+		color: #1a2631;
+		font-family: 'Inconsolata', monospace;
+		font-weight: lighter;
+		font-size: 20px;
+	}
+
+	a,
+	a:link,
+	a:visited,
+	a:hover,
+	a:active{
+
+		color: #1a2631;
+		text-decoration: none;		
+
+	}
+
+
+
+	.main-list{
+
+		list-style-type: none;
+		padding: 0px;
+		margin-top: 0px;
+		}
+
+
+	.logo{
+
+		display: inline-block;
+    	text-align: right;;
+    	margin-bottom: 12px;
+	}
+
+	.logo-image{
+
+		height: 75%;
+		width: 75%;
+
+	}
+
+
+	.top-list{
+
+		list-style-type: none;
+		display: flex;
+		justify-content: space-between;
+		padding: 0px;
+
+	}
+
+	.top-list-li{
+
+		width: 50%;
+		text-align: center;
+
+	}
+
+	.exchange-list{
+
+		list-style-type: none;
+		display: flex;
+		border: 1px solid #1a2631;
+		padding: 0px;
+		margin: 10px 2px 0px 2px;
+
+	}
+
+
+	.exchange-list-li{
+
+		width: 100%;
+
+
+	}
+
+	.coin-list{
+
+		list-style-type: none;
+		padding: 0px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	.coin-list li{
+
+		margin: 10px;
+
+	}
+
+	.buttons-list{
+		padding: 0px;
+		display: flex;
+		justify-content: space-evenly;
+		list-style-type: none;
+
+	}
+
+	.refresh-button,.back-button{
+
+		color: #1a2631;
+		border-radius: 1px;
+		border-color: #1a2631;
+		font-size: 16px;
+
+
+	}
+
+	.refresh-button:hover,.back-button:hover{
+
+		background-color: #1a2631;
+		color: #f8f8ff;
+		
+
+	}
+
+
+	.no-show-class{
+
+		display: none;
+
+	}
+
