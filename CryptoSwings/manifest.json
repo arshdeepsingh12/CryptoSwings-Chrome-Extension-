@@ -3,7 +3,7 @@
   "name": "CryptoSwings",
   "version": "1.0",
   "description": "Check crypto prices on a click!!",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab","https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC"],
   "browser_action": {                        //same as browser_action
     "default_popup": "popup.html",
     "default_icon": "icon.png"

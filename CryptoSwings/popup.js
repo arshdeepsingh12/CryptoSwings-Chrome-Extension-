@@ -7,7 +7,6 @@ document.getElementById("back-button").onclick = function() {
 
 
 document.getElementById("refresh-button").onclick = function() {
-window.open("https://bittrex.com/api/v1.1/public/getticker?market=USDT-LTC","_top")
 	koinexHit();
 	bittrexHit();
 
@@ -26,7 +25,7 @@ koinexHit = function () {
 
       var myObj = JSON.parse(this.responseText);
 
-      document.getElementById("bitcoin-koinex").innerHTML = "&#8377;" + myObj.prices.inr.BTC;
+      document.getElementById("bitcoin-koinex").innerHTML = "&#8377;" + Number(myObj.prices.inr.BTC).toFixed(0);
       document.getElementById("litecoin-koinex").innerHTML = "&#8377;" + myObj.prices.inr.LTC;
       document.getElementById("ethereum-koinex").innerHTML = "&#8377;" + myObj.prices.inr.ETH;
       document.getElementById("ripple-koinex").innerHTML = "&#8377;" + myObj.prices.inr.XRP;            
@@ -103,7 +102,6 @@ function bittrexHit() {
   };
 
 
-
   xhttp.open("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-BTC", true);
 
   xhttp2.open("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-ETH", true);
@@ -111,6 +109,11 @@ function bittrexHit() {
   xhttp3.open("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-LTC", true);
 
   xhttp4.open("GET", "https://bittrex.com/api/v1.1/public/getticker?market=USDT-XRP", true);
+
+
+
+xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
   xhttp.send();
 
@@ -121,3 +124,6 @@ function bittrexHit() {
   xhttp4.send();
 
 }
+
+
+
